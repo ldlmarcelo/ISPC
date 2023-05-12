@@ -224,11 +224,154 @@ edades['Francisco']=22
 print(edades)
 
 print("----------------------------")
-print(" ")
+print("obtener una lista con todas las claves método keys ")
+print(edades.keys())
 
+print("----------------------------")
+print("obtener una lista con todos los valores método values ")
+print(edades.values())
+
+print("----------------------------")
+print("obtener una lista con clave y valor método items")
+print(edades.items())
 
 print("----------------------------")
 print(" ")
 
 print("----------------------------")
 print(" ")
+
+print("#######################################################")
+print("#####ESTRUCTURAS ALTERNATIVAS O CONDICIONALES #########")
+print("#######################################################")
+
+print("sentencia if")
+a=1
+b=2
+
+if b>a:
+    print("b es mayor que a")
+    
+print("----------------------------")
+print("sentencia if else")
+
+if b>a:
+    print("b es mayor que a")
+else:   
+    print("a es mayor que b")
+    
+print("----------------------------")
+print("sentencia elif")
+
+print("Si esto no es verdadero, intenta esto otro, y si todas las condiciones fallan en")
+print("ser verdaderas, entonces haz esto.")
+
+x=20
+if x<20:
+    print("x es menor a 20")
+
+elif x>20:
+    print("x es mayor que 20")
+    
+else: 
+    print("x = 20")
+    
+print("#######################################################")
+print("#############Ejercitación CONDICIONALES ###############")
+print("#######################################################")    
+
+print("1- Realice un programa que solicite dos letras ingresadas por el usuario y")
+print("verifique si son iguales o no, mostrando un mensaje.")
+
+letra1=input("ingrese una letra: ")
+letra2=input("ingrese otra letra: ")
+
+if letra1==letra2:
+    print("las letras son iguales ")
+else:
+    print("las letras no son iguales ")
+
+print("----------------------------")
+print("2. Hacer un programa que permita decidir si dos palabras son iguales o")
+print("diferentes. Mostrar mensaje por pantalla.")
+
+palabra1=input("ingrese una palabra: ")
+palabra2=input("ingrese otra palabra: ")
+
+if palabra1==palabra2:
+    print("las palabras son iguales ")
+else:
+    print("las palabras no son iguales ")
+
+print("----------------------------")
+print("3. Realizar un programa que permita ingresar “f” o “m” y determinar si vota")
+print("en mesa femenina o masculina.")
+
+sexo=input("Ingrese f para feminino y m para masculino: ")
+if sexo=="f":
+    print("usted vota en mesa femenina ")
+elif (x!="v" or x!= "f"):
+    print("no ingreso una opción correcta ")
+else:
+    print("usted vota en mesa masculina ")
+    
+print("----------------------------")
+print("4. Realice un programa que lea dos números y diga cuál es el mayor.")
+
+numero1=input("Ingrese el primer número")
+numero2=input("Ingrese el segundo número")
+
+if numero1>numero2:
+    print(numero1," es mayor que ", numero2)
+elif numero2>numero1:
+    print(numero1," es menor que ", numero2)
+elif numero1==numero2:
+    print("los números son iguales")
+    
+else:
+    print("no ingresó números válidos")
+    
+print("----------------------------")
+print("5. Realice un programa que cambie pesos a dólares. Mejórelo, añadiendo ")
+print("el cambio de dólares a pesos y que sea el usuario quién decida qué tipo ")
+print("de cambio quiere, si de dólares a pesos o viceversa. ")
+
+moneda=input("ingresa la moneda que quiere vender. D para dolar y P para pesos: ")
+vdolar=float(input("ingresa el valor actual del dolar: "))
+monto=float(input("Ingresa la cantidad: "))
+if moneda=="D":
+    print("Te damos por tus  dólares ", monto * vdolar," pesos")
+else:
+    print("Te damos por tus  pesos ", monto / vdolar," dólares")
+
+
+
+# Definimos los tipos de cambio
+peso_a_dolar = 0.00217391
+dolar_a_peso = 460
+
+# Pedimos al usuario que seleccione el tipo de conversión
+tipo_conversion = input("¿Qué tipo de conversión deseas hacer?\n1. De pesos a dólares\n2. De dólares a pesos\n")
+
+# Verificamos la selección del usuario y pedimos el monto a convertir
+if tipo_conversion == "1":
+    monto = float(input("Ingresa el monto en pesos: "))
+    resultado = monto * peso_a_dolar
+    print("El monto de", monto, "pesos equivale a", resultado, "dólares.")
+elif tipo_conversion == "2":
+    monto = float(input("Ingresa el monto en dólares: "))
+    resultado = monto * dolar_a_peso
+    print("El monto de", monto, "dólares equivale a", resultado, "pesos.")
+else:
+    print("Selección inválida. Debe ingresar 1 o 2 para seleccionar el tipo de conversión.")
+
+
+print("----------------------------")
+print("6. Realice un programa donde el usuario ingrese su edad. Si es mayor de")
+print("16 años, muestre un mensaje diciendo “puede votar”, sino “no vota”.")
+
+edad=int(input("ingresa tu edad: "))
+if edad <=16:
+    print("no puedes votar")
+else:
+    print("puedes votar")
