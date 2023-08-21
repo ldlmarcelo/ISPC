@@ -3,13 +3,19 @@ class moto:
     modelo=""
     patente=""
     kilometraje=int(0)
+    patentado=1950
+    color=""
+    litros=0
     
-    def __init__(self, marca, modelo, patente, kilometraje,):
+    def __init__(self, marca, modelo, patente, kilometraje, patentado, color, litros):
 
         self.marca=marca
         self.modelo=modelo
         self.patente=patente
         self.kilometraje=kilometraje
+        self.patentado=patentado
+        self.color=color
+        self.litros=litros
 
     def get_marca(self):
         return self.marca
@@ -35,7 +41,34 @@ class moto:
     def set_kilometraje(self,kilometraje):
         self.kilometraje=kilometraje
 
+    def get_patentado(self):
+        return self.patentado
+    
+    def set_patentado(self,patentado):
+        self.patentado=patentado
+
+    def get_color(self):
+        return self.color    
+    
+    def set_color(self,color):
+        self.color=color
+
+    def get_litros(self):
+        return self.litros
+
+    def set_litros(self,litros):
+        self.litros=litros    
+
     def __str__(self):
-        return f"Marca: {self.marca}, Modelo: {self.modelo}, Patente: {self.patente}, Kilometraje: {self.kilometraje}"
+        return f"La rarca de la motos es {self.marca}, y su dodelo es {self.modelo}, . La patente es {self.patente}, y tiene {self.kilometraje} Kilómetros. El color es {self.color} y se le pueden cargar {self.litros} litros "
         
         
+    @staticmethod
+    def MotosConMenosDe1000km(lista_de_motos):
+        motos_menos_de_1000km = [moto for moto in lista_de_motos if moto.kilometraje < 1000]
+        return motos_menos_de_1000km
+
+    @staticmethod
+    def Patentes2021(lista_de_motos):
+        patentes_2021 = [moto for moto in lista_de_motos if moto.patentado == 2021]
+        return patentes_2021
